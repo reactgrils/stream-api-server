@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",        
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "outDir":"./build",
+    "watch": false,
+    "experimentalDecorators": true
+},
+  "include":[
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
