@@ -4,7 +4,8 @@
   "description": "api-server",
   "main": "index.js",
   "scripts": {
-    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/server.ts"
+    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/server.ts",
+    "restart:service": "pm2 stop ts-node && pm2 start ts-node -- --watch  ./server/index.ts"
   },
   "repository": {
     "type": "git",
