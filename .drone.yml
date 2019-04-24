@@ -2,11 +2,11 @@ pipeline:
   scp:
     image: appleboy/drone-scp
     pull: true
-    host:
-      - stream-api-server.tomas.website
-    port: 22
-    username: root
-    user: root
+    # host:
+    #   - stream-api-server.tomas.website
+    # port: 22
+    # username: root
+    # user: root
     secrets: [ ssh_password ]
     # target: /root
     commands:
