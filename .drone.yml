@@ -13,7 +13,6 @@ pipeline:
       - /drone/src/github.com/reactgrils/stream-api-server
     when:
       branch: master
-
   ssh:
     image: appleboy/drone-ssh
     host: 
