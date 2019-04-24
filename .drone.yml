@@ -30,7 +30,7 @@ pipeline:
       - cp stream-api-server.config /var/www/html/stream-api-server.tomas.website/.env
       - cp -a src/* /var/www/html/stream-api-server.tomas.website
       - cd /root
-      - rm -rf /root/drone
+      # - rm -rf /root/drone
       - cd /var/www/html/stream-api-server.tomas.website
       - yarn restart:service
     when:
