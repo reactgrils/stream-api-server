@@ -8,12 +8,12 @@ pipeline:
     username: root
     user: root
     secrets: [ ssh_password ]
-    target: /root
+    # target: /root
     commands:
       - pwd
       - ls /drone/src/github.com/reactgrils/stream-api-server
-    source:
-      - /drone/src/github.com/reactgrils/stream-api-server
+    # source:
+    #   - /drone/src/github.com/reactgrils/stream-api-server
     when:
       branch: master
   ssh:
