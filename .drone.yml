@@ -4,7 +4,7 @@ pipeline:
     pull: true
     host:
       - 139.162.9.68
-    port: 22
+    port: 22  
     username: root
     user: root
     secrets: [ ssh_password ]
@@ -24,13 +24,11 @@ pipeline:
     script:
       - . /root/.nvm/nvm.sh && nvm use 10.9.0
       - mkdir -p /var/www/html/stream-api-server.tomas.website
-      - cp /root/drone/src/github.com/reactgrils/stream-api-server /var/www/html/stream-api-server.tomas.website
+      - cp -a /root/drone/src/github.com/reactgrils/stream-api-server/* /var/www/html/stream-api-server.tomas.website/
       - cd /var/www/html/stream-api-server.tomas.website
       - yarn install
-      - cp stream-api-server.config /var/www/html/stream-api-server.tomas.website/.env
-      - cp -a src/* /var/www/html/stream-api-server.tomas.website
-      - cd /root
-      # - rm -rf /root/drone
+      - cp /root/stream-api-server.config /var/www/html/stream-api-server.tomas.website/.env
+      - rm -rf /root/drone
       - cd /var/www/html/stream-api-server.tomas.website
       - yarn restart:service
     when:
