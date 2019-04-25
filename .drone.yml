@@ -30,6 +30,6 @@ pipeline:
       - cp /root/stream-api-server.config /var/www/html/stream-api-server.tomas.website/.env
       - rm -rf /root/drone
       - cd /var/www/html/stream-api-server.tomas.website
-      - yarn restart:service
+      - yarn watch-server
     when:
       branch: master
